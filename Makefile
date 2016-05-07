@@ -2,7 +2,7 @@ all: clean build
 
 build:
 	-mkdir build
-	avr-as -mmcu=attiny13a -o ./build/main.o ./src/main.S 
+	avr-as -mmcu=attiny13a -o ./build/main.o ./src/main.s
 	avr-ld -o ./build/main.elf ./build/main.o
 	avr-objcopy -O ihex ./build/main.elf ./build/main.hex
 
